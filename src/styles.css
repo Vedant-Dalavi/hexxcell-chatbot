@@ -1,0 +1,34 @@
+/* Tailwind base layers — Angular picks these up via PostCSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: #0a0d1a;
+  color: #fff;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Custom scrollbar — thin, dark ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #243858 transparent;
+}
+*::-webkit-scrollbar       { width: 4px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: #243858; border-radius: 2px; }
+
+/* ── Hide textarea scrollbar ── */
+textarea { scrollbar-width: none; }
+textarea::-webkit-scrollbar { display: none; }
+
+/* ── Bubble bold text (rendered via innerHTML) ── */
+.bot-bubble strong {
+  color: #00a3e0;
+  font-weight: 600;
+}

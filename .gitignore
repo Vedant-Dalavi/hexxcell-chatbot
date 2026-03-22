@@ -1,0 +1,7 @@
+.vercel
+node_modules/
+dist/
+build/
+out/
+.angular/
+src/environments/environment.prod.ts
